@@ -1,0 +1,68 @@
+<div>
+	<div class="caja">
+		<span class="input-group-addon" id="sizing-addon2">{{detalleCtrl.receta.nombre}}</span>
+
+		<label><b>{{detalleCtrl.receta.nombre}}</b></label><br>
+		<label><i><b>Calorías</b></i></label>
+		<label>{{detalleCtrl.receta.calorias}}</label><br>
+	</div>
+	<table name="central">
+		<tr>
+			<div>
+				<td>
+					<div name="columnaIzq">
+						<label><b>Dificultad:</b></label>
+						<label>{{detalleCtrl.receta.dificultad}}</label><br><br>
+						<label><b>Ingredientes</b></label>
+						<br><br>
+						<table class="tablaIngredientes">
+							<tr>
+								<th>Dosis</th>
+								<th>Ingrediente</th>
+							</tr>
+							<tr ng-repeat="ingrediente in receta.ingredientes">
+								<td>{{ingrediente.dosis}}</td>
+								<td>{{ingrediente.nombreIngrediente}}</td>
+							</tr>
+						</table>
+						<div>
+							<br><br><br>
+							<label><b>Favorita</b></label>
+							<INPUT type="checkbox" ng-checked="receta.esFavorita"></INPUT>
+							<br><br><br>
+						</div>
+					</div>
+				</td>
+				<td>
+					<div name="columnaDer">
+						<label><b>Temporada:</b></label>
+						<label>{{receta.temporada}}</label>
+						<br><br>
+						<label><b>Condimentos</b></label>
+						<br><br>
+						<table class="tablaCondimentos">
+							<tr ng-repeat="condimento in receta.condimentos">
+								<td>{{condimento}}</td>
+							</tr>
+						</table>
+						<br><br>
+						<div>
+							<label><b>Condiciones</b></label>
+							<br><br>
+							<table class="tablaCondimentos" name="condicionesPre">
+								<tr ng-repeat="condicion in receta.condiciones">
+									<td>{{condicion}}</td>
+								</tr>
+							</table>		
+						</div>
+					</div>
+				</td>
+			</div>
+		</tr>
+	</table>
+	<div class="caja" name="Bot">
+		<label><b>Proceso de Preparacion:</b></label>		
+		<br><br>
+		<label><i>{{receta.proceso}}</i></label>
+	</div>
+</div>
