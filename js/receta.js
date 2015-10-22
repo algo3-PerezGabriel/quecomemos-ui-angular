@@ -1,0 +1,3 @@
+var Receta = function(nombreReceta) {
+
+};

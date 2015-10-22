@@ -1,11 +1,11 @@
-queComemosApp.service('RecetasService',function() {
+queComemosApp.service('RecetasService',function () {
 	
-	idRecetas = 0;
-
-
 	this.recetas = [
-			{
-				id: 0,
+			{ 
+				condiciones: ['condicion 1', 'condicion 2'],
+				preparacion: " preparacion",
+				esFavorita: true,
+				identificador: 0,
 				nombre: 'Pollo Con Papas', 
 				calorias: 120,
 				dificultad: 'MEDIANA',
@@ -18,7 +18,10 @@ queComemosApp.service('RecetasService',function() {
 					{	nombreIngrediente: "Pollo",
 						dosis: "200g",},],},
 			{
-				id: 1,
+				condiciones: ['condicion 1', 'condicion 2'],
+				preparacion: " preparacion",
+				esFavorita: false,
+				identificador: 1,
 				nombre: 'Arroz Salteado', 
 				calorias: 520,
 				dificultad: 'DIFICIL',
@@ -37,7 +40,10 @@ queComemosApp.service('RecetasService',function() {
 					},
 				],},
 			{
-				id: 2,
+				condiciones: ['condicion 1', 'condicion 2'],
+				preparacion: " preparacion",
+				esFavorita: true,
+				identificador: 2,
 				nombre: 'Ensalada Cesar', 
 				calorias: 80,
 				dificultad: 'FACIL',
@@ -56,7 +62,10 @@ queComemosApp.service('RecetasService',function() {
 					},
 				],},
 			{
-				id: 3,
+				condiciones: ['condicion 1', 'condicion 2'],
+				preparacion: " preparacion",
+				esFavorita: true,
+				identificador: 3,
 				nombre: 'Asado de tira', 
 				calorias: 350,
 				dificultad: 'MEDIANA',
@@ -69,7 +78,10 @@ queComemosApp.service('RecetasService',function() {
 					},
 				],},
 			{
-				id: 4,
+				condiciones: ['condicion 1', 'condicion 2'],
+				preparacion: " preparacion",
+				esFavorita: false,
+				identificador: 4,
 				nombre: 'Asado de verduras', 
 				calorias: 90,
 				dificultad: 'FACIL',
@@ -88,7 +100,10 @@ queComemosApp.service('RecetasService',function() {
 					},
 				],},
 			{
-				id: 5,
+				condiciones: ['condicion 1', 'condicion 2'],
+				preparacion: " preparacion",
+				esFavorita: true,
+				identificador: 5,
 				nombre: 'Puchero De Campo', 
 				calorias: 500,
 				dificultad: 'DIFICIL',
@@ -104,7 +119,10 @@ queComemosApp.service('RecetasService',function() {
 					},
 				],},
 			{
-				id: 6,
+				condiciones: ['condicion 1', 'condicion 2'],
+				preparacion: " preparacion",
+				esFavorita: false,
+				identificador: 6,
 				nombre: 'Ensalada Rusa', 
 				calorias: 150,
 				dificultad: 'FACIL',
@@ -120,7 +138,10 @@ queComemosApp.service('RecetasService',function() {
 					},
 				],},
 			{
-				id: 7,
+				condiciones: ['condicion 1', 'condicion 2'],
+				preparacion: " preparacion",
+				esFavorita: false,
+				identificador: 7,
 				nombre: 'Fideos con pesto', 
 				calorias: 290,
 				dificultad: 'MEDIANA',
@@ -136,7 +157,10 @@ queComemosApp.service('RecetasService',function() {
 					},
 				],},
 			{
-				id: 8,
+				condiciones: ['condicion 1', 'condicion 2'],
+				preparacion: " preparacion",
+				esFavorita: true,
+				identificador: 8,
 				nombre: 'Pastel de Papas', 
 				calorias: 440,
 				dificultad: 'DIFICIL',
@@ -159,17 +183,9 @@ queComemosApp.service('RecetasService',function() {
 				],}
 		];
 
-
-
-	this.crearReceta = function (nombre){
-		var receta = new Receta(nombre);
-		receta.id = idRecetas ++;
-		return receta;
-	};
-
-	this.getRecetaById = function (id) {
-    	return _.find(this.recetas, function (receta) {
-      		return receta.id == id;
+	this.getRecetaById = function (identifier) {
+    	return _.find(this.recetas, function(receta) {
+      		return receta.identificador == identifier;
     });
   };
 });

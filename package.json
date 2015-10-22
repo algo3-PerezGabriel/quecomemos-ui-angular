@@ -1,22 +1,16 @@
 {
   "name": "queComemos-ui-angular",
-  "version": "",
-  "description": "Que Comemos Tp - ui - Angular",
+  "version": "1.0.0",
   "scripts": {
     "prestart": "npm install",
-    "start": "http-server  -p 8000 -c-1",
+    "start": "http-server  -p 8888 -c-1",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-
-
-	
 
   "keywords": [
     "angular",
     "ui"
   ],
-  "author": "Gabo",
-  "license": "",
   "dependencies": {
     "angular": "^1.4.4",
     "angular-animate": "^1.4.4",

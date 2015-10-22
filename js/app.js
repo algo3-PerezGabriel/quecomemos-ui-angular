@@ -9,11 +9,9 @@ queComemosApp.controller('BienvenidaController', function (RecetasService) {
 
 });
 
-queComemosApp.controller('DetalleContreller', function ($stateParams, $state, RecetasService){
+queComemosApp.controller('DetalleController', function ($stateParams, RecetasService){
 	
-	this.receta = RecetasService.getRecetaById($stateParams.id);
-
-
+	this.receta = RecetasService.getRecetaById($stateParams.identifier);
 });
 
 

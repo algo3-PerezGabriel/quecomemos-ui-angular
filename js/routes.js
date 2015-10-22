@@ -4,16 +4,16 @@ queComemosApp.config(function ($stateProvider, $urlRouterProvider) {
 
   $stateProvider
 
-    .state('bienvenida', {
+    .state('pantallaBienvenida', {
       url: "/",
       templateUrl: "partials/bienvenida.html",
       controller: "BienvenidaController as bienvenidaCtrl"
     })
 
     .state('verDetalle', {
-      url: "/receta/:id",
+      url: "/receta/:identifier",
       templateUrl: "partials/vistaReceta.html",
       controller: "DetalleController as detalleCtrl"
-    })
+    });
 
 });
